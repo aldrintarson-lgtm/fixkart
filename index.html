@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>FixKart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>FixKart</h1>
+
+<nav>
+<a href="#services">Services</a>
+<a href="#workers">Workers</a>
+<a href="#map">Nearby</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h2>Find Trusted Local Services Instantly</h2>
+
+<input id="search" placeholder="Search service">
+
+<button onclick="searchService()">Search</button>
+
+</section>
+
+
+<section id="services">
+
+<h2>Services</h2>
+
+<div class="grid">
+
+<div class="card" onclick="openBooking('Electrician')">
+<h3>Electrician</h3>
+<p>Electrical repairs and wiring</p>
+</div>
+
+<div class="card" onclick="openBooking('Plumber')">
+<h3>Plumber</h3>
+<p>Water pipe repair</p>
+</div>
+
+<div class="card" onclick="openBooking('AC Repair')">
+<h3>AC Repair</h3>
+<p>Cooling system maintenance</p>
+</div>
+
+<div class="card" onclick="openBooking('Cleaning')">
+<h3>Cleaning</h3>
+<p>Home cleaning services</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="workers">
+
+<h2>Top Rated Workers</h2>
+
+<div id="workerList" class="grid"></div>
+
+</section>
+
+
+<section id="map">
+
+<h2>Nearby Workers</h2>
+
+<div class="map">
+
+<div class="pin" style="top:30%;left:40%"></div>
+<div class="pin" style="top:50%;left:60%"></div>
+<div class="pin" style="top:70%;left:30%"></div>
+
+</div>
+
+</section>
+
+
+<div id="bookingModal" class="modal">
+
+<div class="modalContent">
+
+<h3>Confirm Booking</h3>
+
+<p id="serviceName"></p>
+
+<input placeholder="Enter location">
+
+<button onclick="confirmBooking()">Book Now</button>
+
+<button onclick="closeBooking()">Cancel</button>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>© FixKart 2026</p>
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
